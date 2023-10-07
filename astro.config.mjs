@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   assets: true,
-  site: 'https://hector-granell.github.io',
+  site: 'https://hectorgo124.github.io',
   base: '/hector-granell',
 });
