@@ -1,6 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { ViewTransitions } from "astro:transitions";
+import { Tooltips } from "astro-tooltips";
+
 interface Props {
   title: string;
 }
@@ -18,10 +20,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <Tooltips interactive={false} delay={[150, 150]} />
   </head>
-  <body class="bg-[#5c6b73] w-screen">
+  <body class="bg-[#5c6b73] w-screen overflow-x-hidden">
     <Navigation />
     <slot />
+
     <style>
       :root {
         color-scheme: dark;
@@ -34,6 +38,26 @@ const { title } = Astro.props;
 
       * {
         font-family: "Poppins-Light";
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: #253237;
+      }
+
+      body::-webkit-scrollbar {
+        border-radius: 10px;
+        width: 8px;
+        background-color: transparent;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: transparent;
+      }
+
+      .project__img {
+        width: 30rem;
+        height: 20rem;
       }
     </style>
   </body>

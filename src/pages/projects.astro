@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import minesweeper from "../assets/minesweeper-java.png";
+import msport from "../assets/msport.png";
+import alma from "../assets/alma.png";
+import alize from "../assets/alize.png";
+import explorer from "../assets/explorer.png";
+
+import { Image } from "astro:assets";
+---
+
+<Layout title="PROJECTS">
+  <div class="p-10 flex flex-col gap-24">
+    <div>
+      <p class="text-lg">Here you can find some of my personal projects.</p>
+      <section class="grid md:grid-cols-2 grid-cols-1 pt-5 gap-5">
+        <div class="leading-relaxed flex flex-col gap-2">
+          <a
+            href="https://github.com/hectorgo124/nodejs-express-angular"
+            target="_blank"
+          >
+            <Image
+              class="object-scale-down h-80 hover:scale-105 transition-transform duration-150 w-full cursor-pointer"
+              src={msport}
+              alt={"msport"}
+            />
+          </a>
+          <h2 class="text-center text-3xl">MSPORT</h2>
+          <p>
+            Web platform for sports clubs and user management, roles, gallery,
+            training and news.
+          </p>
+          <p>Made with Angular, NodeJS, Express and Sequelize.</p>
+        </div>
+
+        <div class="leading-relaxed flex flex-col gap-2">
+          <a href="https://github.com/hectorgo124/BUSCAMINAS" target="_blank">
+            <Image
+              class="object-scale-down h-80 hover:scale-105 transition-transform duration-150 w-full cursor-pointer"
+              src={minesweeper}
+              alt={"minesweeper"}
+            />
+          </a>
+
+          <h2 class="text-center text-3xl">MINESWEEPER</h2>
+          <p>In Spanish called "BUSCAMINAS", it's a classic game.</p>
+          <span>Made with Java and JavaFX.</span>
+        </div>
+      </section>
+    </div>
+    <hr class="mx-14 md:mx-32" />
+    <div>
+      <p class="text-lg">
+        And here are the projects I have been involved in at the companies I've
+        worked for:
+      </p>
+      <section class="grid md:grid-cols-2 grid-cols-1 pt-5 gap-5">
+        <div class="leading-relaxed flex flex-col gap-2">
+          <Image
+            class="object-scale-down h-80 p-7 hover:scale-105 transition-transform duration-150 w-full"
+            src={alma}
+            alt={"alma"}
+          />
+          <h2 class="text-center text-3xl">ALMA</h2>
+          <p>
+            ALMA is software for the control and monitoring of DAS Audio
+            systems.
+          </p>
+          <p>Worked with Angular and BEM methodology.</p>
+        </div>
+
+        <div class="leading-relaxed flex flex-col gap-2">
+          <Image
+            class="object-scale-down h-80 p-7 hover:scale-105 transition-transform duration-150 w-full"
+            src={alize}
+            alt={"alize"}
+          />
+          <h2 class="text-center text-3xl">ALIZE</h2>
+          <p>
+            Platform for creating certificates, whose information has been
+            uploaded to Blockchain, providing absolute veracity about the
+            uploaded data.
+          </p>
+          <span
+            >Worked with Angular and Tailwind. Also some task with C# and
+            NodeJS.</span
+          >
+        </div>
+        <div
+          class="leading-relaxed flex flex-col gap-2 md:col-span-2 items-center"
+        >
+          <a href="https://management.alize.es/explorer" target="_blank">
+            <Image
+              class="object-scale-down h-80 p-7 hover:scale-105 transition-transform duration-150 w-full cursor-pointer"
+              src={explorer}
+              alt={"explorer"}
+            />
+          </a>
+
+          <h2 class="text-center text-3xl">BLOCKCHAIN EXPLORER</h2>
+          <p>
+            Blockchain explorer, ready to search any transaction, block or
+            address in Alastria.
+          </p>
+          <span>Worked with Angular, Tailwind and Javascript.</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const explorer = document.getElementById("explorer__btn");
+    explorer.addEventListener("click", () => {
+      window.location.href = "https://management.alize.es/explorer";
+    });
+    const msport = document.getElementById("msport__btn");
+    msport.addEventListener("click", () => {
+      window.location.href = "";
+    });
+    const minesweeper = document.getElementById("mines__btn");
+    minesweeper.addEventListener("click", () => {
+      window.location.href = "";
+    });
+  </script>
+</Layout>

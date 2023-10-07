@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+
+import git from "../assets/git.png";
+import angular from "../assets/angular.png";
+import nodejs from "../assets/nodejs.png";
+import js from "../assets/js.png";
+import typescript from "../assets/typescript.png";
+import tailwind from "../assets/tailwind.png";
+---
+
+<div class="w-full flex flex-col">
+  <h2 class="text-center text-3xl mb-3">SKILLS</h2>
+  <ul
+    class="grid grid-cols-2 md:grid-cols-3 gap-8 rounded-t-md bg-[#C2DFE3]/20 p-5"
+  >
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={angular}
+        alt={"angular"}
+      />
+    </li>
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={nodejs}
+        alt={"nodejs"}
+      />
+    </li>
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={tailwind}
+        alt={"tailwind"}
+      />
+    </li>
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={git}
+        alt={"git"}
+      />
+    </li>
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={typescript}
+        alt={"typescript"}
+      />
+    </li>
+    <li class="flex justify-center">
+      <Image
+        class="object-scale-down w-20 h-20 md:w-24 md:h-24 xl:w-32 xl:h-32 hover:scale-105 transition-transform duration-150"
+        src={js}
+        alt={"js"}
+      />
+    </li>
+  </ul>
+</div>

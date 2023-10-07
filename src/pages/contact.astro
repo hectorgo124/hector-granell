@@ -1,7 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="CONTACT">
-	Contact
+  <div
+    class="md:absolute inset-0 flex flex-col gap-16 p-5 justify-center items-center"
+  >
+    <section class="grid md:grid-cols-3 gap-16">
+      <a
+        href="https://www.linkedin.com/in/hector-granell-oliva/"
+        target="_blank"
+        class="flex bg-[#253237] p-6 rounded-md shadow-md hover:scale-110 transition-transform duration-150 cursor-pointer"
+      >
+        <Icon name="linkedin" />
+      </a>
+      <a
+        href="https://github.com/hectorgo124"
+        target="_blank"
+        class="flex bg-[#253237] p-6 rounded-md shadow-md hover:scale-110 transition-transform duration-150 cursor-pointer"
+      >
+        <Icon name="github" />
+      </a>
+      <a
+        href="mailto:granellolivahector@gmail.com"
+        class="flex bg-[#253237] p-6 rounded-md shadow-md hover:scale-110 transition-transform duration-150 cursor-pointer"
+      >
+        <Icon name="mail" />
+      </a>
+    </section>
+  </div>
+
+  <script>
+    const link = document.querySelector('a[href^="mailto:"]');
+    if (link) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = link.href;
+      });
+    }
+  </script>
 </Layout>
+
+<style lang="css">
+  [astro-icon] {
+    width: 4rem;
+  }
+  [astro-icon="annotation"] {
+    color: red;
+    /* OR */
+    fill: red;
+  }
+</style>
